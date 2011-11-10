@@ -1,0 +1,19 @@
+PATH
+  remote: .
+  specs:
+    api-buddy (0.0.1)
+
+PATH
+  remote: ~/code/api-buddy-gem/ruby-fifo
+  specs:
+    ruby-fifo (0.0.1)
+
+GEM
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  api-buddy!
+  ruby-fifo!

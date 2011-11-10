@@ -1,0 +1,1 @@
+ApiBuddy.setup

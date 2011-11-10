@@ -5,7 +5,8 @@ namespace :apibuddy do
     require './api_buddy.rb'
   end
   
-  task :work => [:init] do
+  #task :work => [:init] do
+  task :work => [:environment] do
     ApiBuddy::Listener.run
   end
   

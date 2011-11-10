@@ -2,7 +2,10 @@ require File.expand_path('../api_buddy/job', __FILE__)
 require File.expand_path('../api_buddy/queue_reader', __FILE__)
 require File.expand_path('../api_buddy/queue_writer', __FILE__)
 require File.expand_path('../api_buddy/listener', __FILE__)
-require File.expand_path('../../ruby-fifo/lib/fifo.rb', __FILE__)
+
+require '~/code/api-buddy-gem/ruby-fifo/lib/fifo.rb' #File.expand_path('../../ruby-fifo/lib/fifo.rb', __FILE__)
+#load File.expand_path('../../rakefile.rb', __FILE__)
+require File.expand_path('../tasks/tasks.rb', __FILE__)
 
 module ApiBuddy
 
@@ -22,7 +25,6 @@ module ApiBuddy
   
   def self.go(model_object, method_name)
     job = Job.from_obj(model_object, method_name)
-    p "Job: #{job}"
     self.qw.add(job.to_s)
   end
 
